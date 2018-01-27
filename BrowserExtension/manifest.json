@@ -22,7 +22,8 @@
     ],
     
     "permissions": [
-        "contextMenus"
+        "contextMenus",
+        "storage"
     ],
 
     "web_accessible_resources": [
