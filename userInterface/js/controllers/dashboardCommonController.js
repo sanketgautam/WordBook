@@ -3,29 +3,7 @@
 var myApp = angular.module('drona');
 
 myApp.controller('dashboardCommonController', ["$scope", "$mdSidenav", "$timeout", "$mdDialog", "menu", "$location", "$rootScope", "$mdUtil",'restAPI','$window','$state', function(e, n, o, l, i, s, r, m,restAPI,$window,$state) {
-
-  e.getParentsData = function() {
-    r.parentsData = null;
-      restAPI.send('get', '/me',null, null)
-      .then(function(data) {
-        data = data.data;
-        if(data.status ==200){
-          r.parentsData = data.data;
-          r.defaultChild = 0;
-          r.selectedChild = r.parentsData.myChildren[r.defaultChild];
-          r.$broadcast('available');
-        }else{
-          $state.go("home.login");
-        }
-      }, function(data) {
-        $state.go("home.login");
-      });
-  };
-  e.getParentsData();
-
-  e.changeMyChild = function(){
-    r.selectedChild = r.parentsData.myChildren[e.defaultChild];
-  };
+ 
 
   function c() {
     o(function() {

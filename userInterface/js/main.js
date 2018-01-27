@@ -13,22 +13,59 @@ myApp.config(['$locationProvider', '$stateProvider', '$httpProvider', function($
         }
       }
     })
-   
-    .state('dashboard.dict', {
+
+    .state('dashboard.recentwords', {
       url: '/',
       views: {
         'main@dashboard': {
           templateUrl: 'views/dash/dashboard.sub.layout.html'
         },
-        'subview@dashboard.dict': {
+        'subview@dashboard.recentwords': {
           templateUrl: 'views/dash/wordlist.html',
           controller: 'wordListController',
+        }
+      }
+    })
+    .state('dashboard.mywordscollection', {
+      url: '/mywordscollection',
+      views: {
+        'main@dashboard': {
+          templateUrl: 'views/dash/dashboard.sub.layout.html'
+        },
+        'subview@dashboard.mywordscollection': {
+          templateUrl: 'views/dash/mywordscollection.html',
+          controller: 'wordListController',
+        }
+      }
+    })
+
+    .state('dashboard.vocabgames', {
+      url: '/vocabgames',
+      views: {
+        'main@dashboard': {
+          templateUrl: 'views/dash/dashboard.sub.layout.html'
+        },
+        'subview@dashboard.vocabgames': {
+          templateUrl: 'views/dash/vocabgames.html',
+          controller: 'gameController',
+        }
+      }
+    })
+    .state('dashboard.flashcard', {
+      url: '/flashcard',
+      views: {
+        'main@dashboard': {
+          templateUrl: 'views/dash/dashboard.sub.layout.html'
+        },
+        'subview@dashboard.flashcard': {
+          templateUrl: 'views/dash/flashcards.html',
+          controller: 'gameController',
         }
       }
     });
 
 
-  $locationProvider.html5Mode(true).hashPrefix('!');
+//  $locationProvider.html5Mode(true).hashPrefix('!');
 
 
   $httpProvider.interceptors.push('authInterceptor');

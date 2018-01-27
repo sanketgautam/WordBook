@@ -14,22 +14,22 @@ function menu($location, $rootScope, $http, $window) {
 
   var sections = [{
     name: "Recent Words",
-    url: "/recentwords",
+    url: "dashboard.recentwords",
     type: "link"
   },
   {
     name: "My Words Collection",
-    url: "/mywordscollection",
+    url: "dashboard.mywordscollection",
     type: "link"
   },
   {
     name: "Vocab Games",
-    url: "/vocabgames",
+    url: "dashboard.vocabgames",
     type: "link"
   },
   {
     name: "Logout",
-    url: "/logout",
+    url: "dashboard.logout",
     type: "link"
   }];
 
