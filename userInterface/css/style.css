@@ -81,7 +81,7 @@ md-chips.md-default-theme md-chip, md-chips md-chip{
 
 }
 .flashcardgame .md-display-1{
-  font-size:80px;
+  font-size:60px;
   color:#18BC9C;
   line-height:120%;
 }
@@ -177,6 +177,10 @@ md-chips.md-default-theme md-chip, md-chips md-chip{
 .vocabgame .left-arrow i:hover, .vocabgame .right-arrow i:hover {
   color: #3d3d3d;
   transition: all linear 0.2s;
+}
+
+table.md-table:not(.md-row-select) td.md-cell:first-child, table.md-table:not(.md-row-select) th.md-column:first-child{
+  font-weight:bold;
 }
 
 @media(min-width:960px){
