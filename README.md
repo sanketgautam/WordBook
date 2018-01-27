@@ -1,7 +1,7 @@
 # WordBook
 Simplified Cross-Browser Dictionary cum Vocabulary Builder
 
-**WordBook** is a simple, multi-lingual and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
+**WordBook** is a simple and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
 
 ## Ideal Goals
 
@@ -14,13 +14,13 @@ Simplified Cross-Browser Dictionary cum Vocabulary Builder
  - Users can mark some word as favorite or delete some word from 
  - Users can go through their word history and recent words
 
-## Why this? Not Blockchain, AI, IoT, Cloud some other trending tech?
+## Why this? Not Blockchain, AI, IoT, Cloud or some other trending tech?
    Traditional Vocabulary Learning Application and Systems are too way generic. They doesn't provide customized learning experience to cater the needs of different users according. We browse internet all the day, read many articles and come around new terminologies & words. We look them up in the dictionary and most of the times we forget them. For people focusing on learning new vocabularies and/or preparing for exams like CAT, GRE etc., require continuous and extensive recitation of vocabulary. 
    Consider an example for better example, we watch lot of movies, we discover unknown words, check their meaning in dictionary. Most of those words repeat somewhere else, and we look-up the dictionary again.
-   Also most of the traditional vocabulary builders does not provide generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
+   Also most of the traditional vocabulary builders provide generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
    So, to improve the overall experience we introdcuce the "difficuly-concept" (as explained below) and personalize the vocabulary learning experience and help improve the learning curve. 
    
-__We believe in simplicity of solving a problem while focusing on user-experience__.
+                    "__We believe in simplicity of solving a problem while focusing on user-experience__".
 
 ## How WordBook Works?
 
@@ -62,22 +62,22 @@ Browser Extensions is used to put the words into users' pocket/ database. Then, 
 
     This section contains some sample screeshots of the project
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png" width="450">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png" width="450">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png" width="450">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png" width="450">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png" width="450">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png" width="500">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png" width="450">
 </a>
 
 ## Future Improvements
