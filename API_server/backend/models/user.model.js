@@ -30,11 +30,15 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   userDict: [{
-    word: String,
+    word: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Dictionary',
+    },
+    lang: String,
     difficulty: {
-      type: Number,
-      enum: [1, 2, 3], // 1easy, 2medium, 3difficult
-    }
+      type: String,
+      enum: ["easy", "medium", "hard"], // 1easy, 2medium, 3difficult
+    },
   }],
   salt: {
     type: String
@@ -85,7 +89,16 @@ UserSchema.methods.hashPassword = function(password) {
 UserSchema.methods.authenticate = function(password) {
   return this.password === this.hashPassword(password);
 };
-
+//
+// UserSchema.virtual('relation', {
+//   ref: 'Dictionary', // The model to use
+//   localField: 'word', // Find people where `localField`
+//   foreignField: 'word', // is equal to `foreignField`
+//   // If `justOne` is true, 'members' will be a single doc as opposed to
+//   // an array. `justOne` is false by default.
+//   justOne: false
+// });
+//
 
 /**
  * @typedef User

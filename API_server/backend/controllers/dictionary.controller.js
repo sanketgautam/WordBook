@@ -38,25 +38,43 @@ exports.findWord = function(req, res, next) {
           };
           word_def.push(pp);
         }
+        if(body.length <= 0){
+          let meaning  = {
+            word : req.params.word,
+            meanings : [],
+          };
+          return res.json(new Response(httpStatus.OK, 'word def', meaning, null));
+        }
+
+
         let dictionary = new Dictionary({
           word: req.params.word,
           definition: {
             ahdLegacy: word_def,
           },
         });
+
+        let meaning  = {
+          word : req.params.word,
+          meanings : word_def,
+        };
+
+
         dictionary.save(function(err) {
           if (err) {
             return next(new APIError(httpStatus.INTERNAL_SERVER_ERROR, 'Server error, Please try again', null, null));
           } else {
-
-
-            return res.json(new Response(httpStatus.OK, 'word def', dictionary, null));
+            return res.json(new Response(httpStatus.OK, 'word def', meaning, null));
           }
         });
 
       });
     } else {
-      return res.json(new Response(httpStatus.OK, 'word def', word, null));
+      let meaning  = {
+        word : word.word,
+        meanings : word.definition.ahdLegacy,
+      };
+      return res.json(new Response(httpStatus.OK, 'word def', meaning, null));
     }
   });
 

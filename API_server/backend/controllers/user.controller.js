@@ -5,6 +5,9 @@ import Response from '../helpers/Response';
 import config from '../../config/config';
 import mongoose from 'mongoose';
 import User from '../models/user.model';
+import Dictionary from '../models/dictionary.model';
+const ObjectId = mongoose.Types.ObjectId;
+
 
 /**
  * Returns jwt token if valid username and password is provided
@@ -108,42 +111,98 @@ exports.signup = function(req, res, next) {
 
 exports.saveUserWord = function(req, res, next) {
 
-  let param_ = {
-    word: req.body.word,
-    difficulty: 1,
-  };
+  let diff = req.body.difficulty;
+  let a = ["easy", "medium", "hard"];
 
-  User.findOneAndUpdate({
-      _id: req.user._id,
-      'userDict.word': req.body.word
-    }, {
-      $set: {
-        'userDict.$.difficulty': param_.difficulty
-      }
-    })
-    .exec(function(err, word) {
-      if (err) {
-        const err = new APIError(httpStatus.BAD_REQUEST, 'Unable to save word', err, null);
+  if (diff == "easy" || diff == "medium" || diff == "hard") {
+
+
+
+    Dictionary.findOne({
+      word: req.body.word,
+    }, '-definition').exec(function(err, dword) {
+
+      if (err || !dword) {
+        const err = new APIError(httpStatus.BAD_REQUEST, 'Invalid request', null, null);
         return next(err);
-      } else if(!word){
+      } else {
+
+        let wordid = new ObjectId(dword._id);
+
 
         User.findOneAndUpdate({
-          _id: req.user._id
-        }).exec(function(err, user) {
-          if(err || !user){
-            const err = new APIError(httpStatus.BAD_REQUEST, 'Unable to save word', err, null);
-            return next(err);
-          }
-          user.userDict.push(param_);
-          user.save();
-          param_.saved = true;
-          return res.json(new Response(httpStatus.OK, 'Word saved successfully', param_, null));
+            _id: req.user._id,
+            userDict: {
+              $elemMatch: {
+                'word': wordid
+              }
+            }
+          }, {
+            $set: {
+              'userDict.$.difficulty': diff
+            }
+          })
+          .exec(function(err, word) {
+            if (err) {
+              const err = new APIError(httpStatus.BAD_REQUEST, 'Unable to save word', null, null);
+              return next(err);
+            } else if (!word) {
+              User.findOneAndUpdate({
+                _id: req.user._id
+              }).exec(function(err, user) {
+                if (err || !user) {
+                  const err = new APIError(httpStatus.BAD_REQUEST, 'Unable to save word', null, null);
+                  return next(err);
+                }
+                let wwoo = {
+                  word: wordid,
+                  difficulty: diff,
+                };
 
+                user.userDict.push(wwoo);
+                user.save();
+                wwoo.saved = true;
+                return res.json(new Response(httpStatus.OK, 'Word saved successfully', wwoo, null));
+
+              });
+
+            } else {
+              return res.json(new Response(httpStatus.OK, 'Word saved successfully', word, null));
+            }
+          });
+
+
+      }
+    });
+  } else {
+    const err = new APIError(httpStatus.BAD_REQUEST, 'Invalid difficulty option :(', null, null);
+    return next(err);
+  };
+
+};
+
+exports.getAllWords = function(req, res, next) {
+
+
+  User.findOne({
+      _id: req.user._id,
+    }, 'userDict')
+    .populate('userDict.word')
+    .exec(function(err, dict) {
+      if (err || !dict) {
+        return next(new APIError(httpStatus.BAD_REQUEST, 'Record does not exists', null, null));
+      } else {
+
+        let pp = dict.userDict.map(function(val){
+          let nword = {
+            word : val.word.word,
+            meaning: val.word.definition.ahdLegacy[0]
+          }
+          return nword;
         });
 
-      }else{
-        return res.json(new Response(httpStatus.OK, 'Word saved successfully', param_, null));
 
+        return res.json(new Response(httpStatus.OK, 'User words', pp));
       }
     });
 

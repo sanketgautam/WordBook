@@ -21,5 +21,8 @@ router.route('/me')
 router.route('/saveWord')
     .post(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.saveUserWord);
 
+router.route('/words')
+    .get(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.getAllWords);
+
 
 export default router;
