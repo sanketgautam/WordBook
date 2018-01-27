@@ -14,6 +14,36 @@ myApp.config(['$locationProvider', '$stateProvider', '$httpProvider', function($
       }
     })
 
+    .state('login', {
+      url: '/login',
+      views: {
+        '': {
+          templateUrl: 'views/dash/login.html',
+          controller: 'loginController',
+        }
+      }
+    })
+
+    .state('register', {
+      url: '/register',
+      views: {
+        '': {
+          templateUrl: 'views/dash/register.html',
+          controller: 'registerController',
+        }
+      }
+    })
+    .state('logout', {
+      url: '/logout',
+      views: {
+        '': {
+          templateUrl: 'views/dashboard/logout.html',
+          controller: 'logoutController',
+        }
+      }
+    })
+
+
     .state('dashboard.recentwords', {
       url: '/',
       views: {
@@ -22,7 +52,7 @@ myApp.config(['$locationProvider', '$stateProvider', '$httpProvider', function($
         },
         'subview@dashboard.recentwords': {
           templateUrl: 'views/dash/wordlist.html',
-          controller: 'wordListController',
+          controller: 'recentWordController',
         }
       }
     })
@@ -52,14 +82,14 @@ myApp.config(['$locationProvider', '$stateProvider', '$httpProvider', function($
       }
     })
     .state('dashboard.flashcard', {
-      url: '/flashcard',
+      url: '/vocabgames/flashcard',
       views: {
         'main@dashboard': {
           templateUrl: 'views/dash/dashboard.sub.layout.html'
         },
         'subview@dashboard.flashcard': {
           templateUrl: 'views/dash/flashcards.html',
-          controller: 'gameController',
+          controller: 'flashGameController',
         }
       }
     });

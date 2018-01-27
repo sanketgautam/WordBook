@@ -13,17 +13,15 @@
         </md-card>
 </div> -->
 <div class="vocabgame">
-  <div class="left-arrow"><i class="material-icons">chevron_left</i></div>
+  <div class="left-arrow" ng-click="getprev();"><i class="material-icons">chevron_left</i></div>
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
   	<div class="flipper">
   		<div class="front" ng-click="">
         <div class="flashcardgame">
           <md-card>
             <md-card-title>
-              <h1 class="md-display-1 center">smile</h1>
+              <h1 class="md-display-1 center">{{word.word}}</h1>
               <br>
-
-
             </md-card-title>
             <div class="pronounce">
             <span class="speech">/smʌɪl/</span> <i class="material-icons">volume_up</i>
@@ -41,7 +39,7 @@
         <div class="flashcardgame">
           <md-card>
             <md-card-title>
-              <span class="meaning"><strong>[<span class="partofspeech"><em>verb</em></span>]form one's features into a pleased, kind, or amused expression, typically with the corners of the mouth turned up and the front teeth exposed.</strong></span>
+              <span class="meaning"><strong>[<span class="partofspeech"><em>{{word.meaning.partOfSpeech}}</em></span>]{{word.meaning.text}}</strong></span>
 
             </md-card-title>
             <md-card-content >
@@ -55,5 +53,5 @@
   		</div>
   	</div>
   </div>
-  <div class="right-arrow"><i class="material-icons">chevron_right</i></div>
+  <div class="right-arrow" ng-click="getnext();"><i class="material-icons">chevron_right</i></div>
 </div>

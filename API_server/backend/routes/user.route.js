@@ -24,5 +24,8 @@ router.route('/saveWord')
 router.route('/words')
     .get(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.getAllWords);
 
+router.route('/recent')
+    .get(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.getRecent);
+
 
 export default router;

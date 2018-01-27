@@ -5,21 +5,16 @@ var myApp = angular.module('drona');
 myApp.controller('wordListController', function(restAPI, $scope, $timeout, $mdDialog, $rootScope, $window, $state, SpinnerService) {
   $scope.errorMsg = null;
 
-  $scope.perPage = 10;
-
-  $scope.loadTeachers = function() {
+  $scope.getUserWords = function() {
     SpinnerService.transitionStart();
 
-    var params = {
-      page: $scope.paging.current,
-      perPage: $scope.perPage,
-    };
 
-    restAPI.send('get', '/teachers', params, null)
+    restAPI.send('get', '/user/words', null, null)
       .then(function(data) {
         var data = data.data.data;
-        $scope.teachers = data.teachers;
-        $scope.paging.total = data.totalPages;
+      //  console.log(data);
+        $scope.words = data;
+
        }, function(data) {
 
       }).finally(function(){
@@ -28,25 +23,6 @@ myApp.controller('wordListController', function(restAPI, $scope, $timeout, $mdDi
       });
   };
 
-  initPagination();
-  function initPagination(){
-    console.log($scope.totalPages);
-    $scope.paging = {
-      total: 1,
-      current: 1,
-      onPageChanged: $scope.loadTeachers,
-    };
-  }
-  //
-  // $scope.doSecondaryAction = function(event) {
-  //   $mdDialog.show(
-  //     $mdDialog.alert()
-  //       .title('Secondary Action')
-  //       .textContent('Secondary actions can be used for one click actions')
-  //       .ariaLabel('Secondary click demo')
-  //       .ok('Neat!')
-  //       .targetEvent(event)
-  //   );
-  // };
+  $scope.getUserWords();
 
 });

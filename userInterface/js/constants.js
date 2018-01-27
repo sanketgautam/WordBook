@@ -8,7 +8,7 @@
   angular
   	.module('drona')
     .constant('CONSTANTS', {
-      'API_URL': 'http://local.api.grabpustak.com/drona/v1/parents',
+      'API_URL': 'http://localhost:4040/api',
     });
 
 })();

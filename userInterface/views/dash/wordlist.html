@@ -2,129 +2,15 @@
 
        <md-content layout="row" layout-wrap>
 
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+          <md-card ng-repeat="word in recentwords">
             <md-card-title>
               <md-card-title-text>
-                <span class="md-headline">hack <span class="speech">/ˈhapi/</span> <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>verb</em></span>
-                <p>gain unauthorized access to data in a system or computer.</p>
-              </md-card-title-text>
+                <span class="md-headline">{{word.word}}
+                  <!-- <span class="speech">/smʌɪl/</span> -->
+                  <a href="#"><i class="material-icons">volume_up</i></a></span>
 
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">smile <span class="speech">
-        /smʌɪl/</span><a href="#"><i class="material-icons">volume_up</i></a></span>
-
-                <span class="md-subhead"><em>verb</em></span>
-                <p>form one's features into a pleased, kind, or amused expression, typically with the corners of the mouth turned up and the front teeth exposed.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">cheerful <span class="speech">/ˈtʃɪəfʊl,ˈtʃɪəf(ə)l/</span><a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>noticeably happy and optimistic.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">happy <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>feeling or showing pleasure or contentment.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">happy <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>feeling or showing pleasure or contentment.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">happy <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>feeling or showing pleasure or contentment.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">happy <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>feeling or showing pleasure or contentment.</p>
-              </md-card-title-text>
-
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end left">
-              <md-chips>
-                  <md-chip>easy</md-chip>
-                  <md-chip>english</md-chip>
-              </md-chips>
-            </md-card-actions>
-          </md-card>
-          <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">happy <a href="#"><i class="material-icons">volume_up</i></a></span>
-                <span class="md-subhead"><em>adjective</em></span>
-                <p>feeling or showing pleasure or contentment.</p>
+                <span class="md-subhead"><em>{{word.meaning.partOfSpeech}}</em></span>
+                <p>{{word.meaning.text}}</p>
               </md-card-title-text>
 
             </md-card-title>

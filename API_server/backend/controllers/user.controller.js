@@ -181,8 +181,6 @@ exports.saveUserWord = function(req, res, next) {
 };
 
 exports.getAllWords = function(req, res, next) {
-
-
   User.findOne({
       _id: req.user._id,
     }, 'userDict')
@@ -196,7 +194,32 @@ exports.getAllWords = function(req, res, next) {
           let nword = {
             word : val.word.word,
             meaning: val.word.definition.ahdLegacy[0],
-            difficulty: val.word.definition
+            difficulty: val.difficulty
+          }
+          return nword;
+        });
+
+
+        return res.json(new Response(httpStatus.OK, 'User words', pp));
+      }
+    });
+
+};
+exports.getRecent = function(req, res, next) {
+  User.findOne({
+      _id: req.user._id,
+    }, {'userDict' : {$slice : 10}})
+    .populate('userDict.word')
+    .exec(function(err, dict) {
+      if (err || !dict) {
+        return next(new APIError(httpStatus.BAD_REQUEST, 'Record does not exists', null, null));
+      } else {
+
+        let pp = dict.userDict.map(function(val){
+          let nword = {
+            word : val.word.word,
+            meaning: val.word.definition.ahdLegacy[0],
+            difficulty: val.difficulty
           }
           return nword;
         });

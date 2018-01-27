@@ -1,3 +1,22 @@
+<style media="screen">
+  table.md-table td.md-cell.md-numeric, table.md-table th.md-column.md-numeric {
+      text-align: left;
+  }
+</style>
+<md-table-container>
+  <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+    <thead md-head >
+      <tr md-row>
+        <th md-column><span>Word</span></th>
+        <th md-column md-numeric><span>Meaning</span></th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-auto-select ng-repeat="word in words">
+        <td md-cell>{{word.word}}</td>
+        <td md-cell>{{word.meaning.text}}</td>
 
-<h1 class="md-display-1">Recently Added Words</h1>
-<h1 class="md-display-1">Recently Added Words</h1>
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
