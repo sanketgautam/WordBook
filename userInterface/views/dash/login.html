@@ -1,0 +1,39 @@
+<div layout="row" ng-cloak layout-align="center center">
+  <div flex-gt-sm="35" flex-xs="100" flex-sm="50">
+    <md-content>
+      <h3 class="md-headline">Login</h3>
+      <p style="font-size:.8em; width: 100%;color:red;" class="md-accent" ng-show="errorMsg">
+        {{errorMsg}}
+      </p>
+      <form name="loginForm">
+
+        <md-input-container class="md-block">
+          <label> Email</label>
+          <input required type="email" name="email" ng-model="email" md-maxlength="200" ng-pattern="/^.+@.+\..+$/" />
+
+          <div ng-messages="loginForm.email.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your email should not be more than 200 characters long and look like an e-mail address.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container >
+          <label>Password</label>
+          <input md-maxlength="100" type="password" md-no-asterisk novalidate name="password" ng-model="password">
+          <div ng-messages="loginForm.password.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="md-maxlength">Password must be less than 100 characters long.</div>
+          </div>
+        </md-input-container>
+
+        <div>
+          <md-button class="md-raised md-primary" ng-click="login()" ng-disabled="(!loginForm.$dirty || loginForm.mobile.$invalid)" type="submit">Submit</md-button>
+        </div>
+
+
+      </form>
+    </md-content>
+
+  </div>
+</div>

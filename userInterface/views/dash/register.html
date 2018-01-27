@@ -1,0 +1,59 @@
+<div layout="row" ng-cloak layout-align="center center">
+  <div flex-gt-sm="35" flex-xs="100" flex-sm="50">
+    <md-content>
+      <h3 class="md-headline">Register</h3>
+      <p style="font-size:.8em; width: 100%;color:red;" class="md-accent" ng-show="errorMsg">
+        {{errorMsg}}
+      </p>
+      <form name="registerForm">
+
+        <md-input-container class="md-block">
+          <label> First Name</label>
+          <input required type="firstName" name="firstName" ng-model="user.firstName" md-maxlength="200" />
+
+          <div ng-messages="registerForm.firstName.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your first name should not be more than 200 characters long and look like a valid name.
+            </div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label> Last Name</label>
+          <input required type="lastName" name="lastName" ng-model="user.lastName" md-maxlength="200" />
+
+          <div ng-messages="registerForm.lastName.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your last name should not be more than 200 characters long and look like a valid name.
+            </div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label> Email</label>
+          <input required type="email" name="email" ng-model="user.email" md-maxlength="200" ng-pattern="/^.+@.+\..+$/" />
+
+          <div ng-messages="registerForm.email.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your email should not be more than 200 characters long and look like an e-mail address.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container >
+          <label>Password</label>
+          <input md-maxlength="100" type="password" md-no-asterisk novalidate name="password" ng-model="user.password">
+          <div ng-messages="registerForm.password.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="md-maxlength">Password must be less than 100 characters long.</div>
+          </div>
+        </md-input-container>
+
+        <div>
+          <md-button class="md-raised md-primary" ng-click="register()" ng-disabled="(!registerForm.$dirty || registerForm.email.$invalid)" type="submit">Submit</md-button>
+        </div>
+
+
+      </form>
+    </md-content>
+
+  </div>
+</div>

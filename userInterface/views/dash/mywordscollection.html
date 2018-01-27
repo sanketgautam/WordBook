@@ -9,12 +9,14 @@
       <tr md-row>
         <th md-column><span>Word</span></th>
         <th md-column md-numeric><span>Meaning</span></th>
+        <th md-column md-numeric md-order-by="nameToLower"><span>Difficulty</span></th>
       </tr>
     </thead>
     <tbody md-body>
       <tr md-row md-auto-select ng-repeat="word in words">
         <td md-cell>{{word.word}}</td>
         <td md-cell>{{word.meaning.text}}</td>
+        <td md-cell>{{word.difficulty}}</td>
 
       </tr>
     </tbody>
