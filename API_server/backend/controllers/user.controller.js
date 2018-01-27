@@ -112,11 +112,9 @@ exports.signup = function(req, res, next) {
 exports.saveUserWord = function(req, res, next) {
 
   let diff = req.body.difficulty;
-  let a = ["easy", "medium", "hard"];
+  let a = ["easy", "medium", "difficult"];
 
-  if (diff == "easy" || diff == "medium" || diff == "hard") {
-
-
+  if (diff == "easy" || diff == "medium" || diff == "difficult") {
 
     Dictionary.findOne({
       word: req.body.word,
@@ -129,14 +127,9 @@ exports.saveUserWord = function(req, res, next) {
 
         let wordid = new ObjectId(dword._id);
 
-
         User.findOneAndUpdate({
             _id: req.user._id,
-            userDict: {
-              $elemMatch: {
-                'word': wordid
-              }
-            }
+            'userDict.word': wordid
           }, {
             $set: {
               'userDict.$.difficulty': diff
@@ -167,7 +160,13 @@ exports.saveUserWord = function(req, res, next) {
               });
 
             } else {
-              return res.json(new Response(httpStatus.OK, 'Word saved successfully', word, null));
+
+              let wwoo = {
+                word: req.body.word,
+                difficulty: word.difficulty,
+              };
+
+              return res.json(new Response(httpStatus.OK, 'Word saved successfully', wwoo, null));
             }
           });
 
@@ -196,7 +195,8 @@ exports.getAllWords = function(req, res, next) {
         let pp = dict.userDict.map(function(val){
           let nword = {
             word : val.word.word,
-            meaning: val.word.definition.ahdLegacy[0]
+            meaning: val.word.definition.ahdLegacy[0],
+            difficulty: val.word.definition
           }
           return nword;
         });
