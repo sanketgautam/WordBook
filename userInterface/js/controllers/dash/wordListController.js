@@ -4,6 +4,7 @@ var myApp = angular.module('drona');
 
 myApp.controller('wordListController', function(restAPI, $scope, $timeout, $mdDialog, $rootScope, $window, $state, SpinnerService) {
   $scope.errorMsg = null;
+  $rootScope.section_name = "My Words Collection";
 
   $scope.getUserWords = function() {
     SpinnerService.transitionStart();

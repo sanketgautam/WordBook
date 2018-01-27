@@ -117,7 +117,7 @@ exports.saveUserWord = function(req, res, next) {
   if (diff == "easy" || diff == "medium" || diff == "difficult") {
 
     Dictionary.findOne({
-      word: req.body.word,
+      word: req.body.word.toLowerCase(),
     }, '-definition').exec(function(err, dword) {
 
       if (err || !dword) {

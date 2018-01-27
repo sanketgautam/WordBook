@@ -13,7 +13,7 @@
       <ul class="docs-menu">
         <li ng-repeat="section in menu.sections" class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
           <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
-            {{section.name}}
+
           </h2>
           <menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
 
@@ -39,7 +39,7 @@
         </md-button>
 
 
-        <h1 class="md-display-1">{{section.name}}</h1>
+        <h1 class="md-display-1">{{section_name}}</h1>
 
 
         <!-- <div layout="row" flex class="fill-height">

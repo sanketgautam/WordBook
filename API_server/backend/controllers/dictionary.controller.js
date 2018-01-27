@@ -14,7 +14,7 @@ exports.findWord = function(req, res, next) {
   const url = "http://api.wordnik.com:80/" + api_path;
 
   let param_ = {
-    word: req.params.word
+    word: req.params.word.toLowerCase()
   };
   Dictionary.findOne(param_, function(err, word) {
     if (err) {
@@ -40,7 +40,7 @@ exports.findWord = function(req, res, next) {
         }
         if(body.length <= 0){
           let meaning  = {
-            word : req.params.word,
+            word : req.params.word.toLowerCase(),
             meanings : [],
           };
           return res.json(new Response(httpStatus.OK, 'word def', meaning, null));
@@ -48,14 +48,14 @@ exports.findWord = function(req, res, next) {
 
 
         let dictionary = new Dictionary({
-          word: req.params.word,
+          word: req.params.word.toLowerCase(),
           definition: {
             ahdLegacy: word_def,
           },
         });
 
         let meaning  = {
-          word : req.params.word,
+          word : req.params.word.toLowerCase(),
           meanings : word_def,
         };
 
@@ -71,7 +71,7 @@ exports.findWord = function(req, res, next) {
       });
     } else {
       let meaning  = {
-        word : word.word,
+        word : word.word.toLowerCase(),
         meanings : word.definition.ahdLegacy,
       };
       return res.json(new Response(httpStatus.OK, 'word def', meaning, null));

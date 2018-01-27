@@ -4,6 +4,7 @@ var myApp = angular.module('drona');
 
 myApp.controller('gameController', function(restAPI, $scope, $timeout, $mdDialog, $rootScope, $window, $state, SpinnerService) {
   $scope.errorMsg = null;
+  $rootScope.section_name = "Vocab Games";
 
   $scope.perPage = 10;
 
