@@ -1,40 +1,69 @@
 # WordBook
-Simplified Cross-Browser Vocabulary Builder
+Simplified Cross-Browser Dictionary cum Vocabulary Builder
 
-**WordBook** is a simple, multi-lingual and personalized vocabulary builder, having features to improve vocab learning.
+**WordBook** is a simple, multi-lingual and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
 
-## Few Highlights
+## Ideal Goals
 
  - It's a cross-browser platform, hosted on cloud to be accessible from anywhere
- - It automatically identifies lanugages of words and categorizes them accordingly
+ - It automatically identifies languages of words and categorizes them accordingly
  - Vocab personalization using word categorization into Easy, Medium & Hard
+ - We can provide recommendation based on the users previous word categorization of users
  - Word of the Day, will selected be from user's word history or some random new word, it'll help user to revise previous words and learn new words.
  - WordGames - There will be few word games, such as flash cards and vocab quizzes
  - Users can mark some word as favorite or delete some word from 
  - Users can go through their word history and recent words
- - We can provide recommendation based on the users previous word categorization of users (for example, if user1 treats 'dog' as difficult and user2 also treats dog at 'dog', then they may find others words in each others history helpful)
 
+## Why this? Not Blockchain, AI, IoT, Cloud some other trending tech?
+   Traditional Vocabulary Learning Application and Systems are too way generic. They doesn't provide customized learning experience to cater the needs of different users according. We browse internet all the day, read many articles and come around new terminologies & words. We look them up in the dictionary and most of the times we forget them. For people focusing on learning new vocabularies and/or preparing for exams like CAT, GRE etc., require continuous and extensive recitation of vocabulary. 
+   Consider an example for better example, we watch lot of movies, we discover unknown words, check their meaning in dictionary. Most of those words repeat somewhere else, and we look-up the dictionary again.
+   Also most of the traditional vocabulary builders doesn provides generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
+   So, to improve the overall experience we introdcuce the "difficuly-concept" (as explained below) and personalize the vocabulary learning experience and help improve the learning curve. _We believe in simplicity of solving a problem while focusing on user-experience_
 
 ## How WordBook Works?
 
    We believe that Vocab Learning can be made more efficient with the personalization & tailoring to the User needs. Learning new words requires lot's of constistent practice and suggesting words of difficutly similar to what user has learned can add some cherry on this cake.
 
-   **Hey, but wait a minute ... What is meant by difficulty of a word? Have we gone mad or sleep deprived?** 
+   **Hey, but wait a minute ... What is meant by "difficulty" of a word? Have we gone mad or sleep deprived?** 
    
    No, we are fine, atleast for now. Actually difficulty of a word is a context-based concept. Let's consider an example to understand this better, consider two people, Elon & Steve, and
-     - Elon feels that words like 'Tesla', 'HyperLoop' & 'Self-Driving Cars' are easy for him as he loves them and deals with them all the time.
-     - On the other hands for Steve word 'Tesla' seems difficult to him, while term like "Apple" is easy for him.
+    - Elon feels that words like 'Tesla', 'HyperLoop' & 'Self-Driving Cars' are easy for him as he loves them and deals with them all the time.
+    - On the other hands for Steve word 'Tesla' seems difficult to him, while term like "Apple" is easy for him.
     Hence, it's all about perpective and our domains of studies, surroundings and profession. For simplicity we have classified difficulty levels into three dom
-   **Okay! I understand that so called 'word-difficulty concept', then what does WordBook is all about?**
+  
+   **Okay! I understand that so called "word-difficulty" concept, then what does WordBook is all about?**
    
    WordBook enhances the Vocabulary Learning process by personalizing, reciation features, games, history and lot more. It also provides word recommendation by learning from user history and choice of words.
    
+   **Yay, So how exactly does word recommendation will work out?**
+   
+   Hmm, there are two proposed algorithms for that, which shows the trade-off between simplicity and implementation, 
+  - Multiple users marking common words to similar difficulty levels may also have similar treatment for other words in each others' dictionary. Hence, we can recommend them each others words, without them knowing about that (to preserve privacy and anonymity). It's quick and suitable for most of our use-cases.
+
+  - An alternative approach will require a bit of Data Analytics & ML Based Recommendation System to make more accurate predictions/ recommendations, but this approach required data-collection, model training & testing. Hence, not feasible for quick prototype. ML Recommendation can take into account various factors such as _domain of study/profession, age, citizenship etc._
+
+**Seems Okay, So, Is that it?**
+
+Not yet, WordBook provides few other features to make the learning more easier & efficient. Here are few supported features,
+ - It maintains a track record of recent words and difficuly levels assigned
+ - It prepares customized flash cards & quizzes for the users for words recitation
+ - It provides details information on a particular word
+
+**So, what all does WordBook contains? How can I use it?**
+
+It contains a browser-extension, currently support chrome & firefox(partly) and a interactive web-interface for users. 
+ - Browser Extension allows users to look-up word/phrase definitions and save them marking their difficulty.
+ - Web Interface allows users to go through 'recent words', recite using 'flash cards', play 'word games' etc.
+Browser Extensions is used to put the words into users' pocket/ database. Then, user can use web-interface for recitation, get word recommendations and play 'word games'.
 
 ## Screenshots
 
+    This section will some sample screeshots of the Project
+
 ## Future Improvements
  
- - Dictionary could be modified to support muliple source & target languages
- - Recommendation system can actually be implemented 
- - 
-
+ - Compatibility issues must be resolved to make it completely cross-browser
+ - Dictionary could be extended to support muliple source & target languages
+ - ML Recommendation system can be implemented as explained above 
+ - More WordGames can be added to encourage user engagement & learning
+ - WordBook can also provide a "New Word", each time when user opens a new tab (like Momentum)
