@@ -7,9 +7,9 @@ Simplified Cross-Browser Dictionary cum Vocabulary Builder
 
  - It's a cross-browser platform, hosted on cloud to be accessible from anywhere
  - It automatically identifies languages of words and categorizes them accordingly
- - Vocab personalization using word categorization into Easy, Medium & Hard
- - We can provide recommendation based on the users previous word categorization of users
- - Word of the Day, will selected be from user's word history or some random new word, it'll help user to revise previous words and learn new words.
+ - Vocab personalization using word categorization into Easy, Medium & Difficult
+ - We can provide recommendation to users based on their previous word categorization
+ - Word of the Day, may be selected be from user's word history or some random new word, it'll help user to revise previous words and learn new words.
  - WordGames - There will be few word games, such as flash cards and vocab quizzes
  - Users can mark some word as favorite or delete some word from 
  - Users can go through their word history and recent words
@@ -17,8 +17,10 @@ Simplified Cross-Browser Dictionary cum Vocabulary Builder
 ## Why this? Not Blockchain, AI, IoT, Cloud some other trending tech?
    Traditional Vocabulary Learning Application and Systems are too way generic. They doesn't provide customized learning experience to cater the needs of different users according. We browse internet all the day, read many articles and come around new terminologies & words. We look them up in the dictionary and most of the times we forget them. For people focusing on learning new vocabularies and/or preparing for exams like CAT, GRE etc., require continuous and extensive recitation of vocabulary. 
    Consider an example for better example, we watch lot of movies, we discover unknown words, check their meaning in dictionary. Most of those words repeat somewhere else, and we look-up the dictionary again.
-   Also most of the traditional vocabulary builders doesn provides generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
-   So, to improve the overall experience we introdcuce the "difficuly-concept" (as explained below) and personalize the vocabulary learning experience and help improve the learning curve. _We believe in simplicity of solving a problem while focusing on user-experience_
+   Also most of the traditional vocabulary builders does not provide generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
+   So, to improve the overall experience we introdcuce the "difficuly-concept" (as explained below) and personalize the vocabulary learning experience and help improve the learning curve. 
+   
+__We believe in simplicity of solving a problem while focusing on user-experience__.
 
 ## How WordBook Works?
 
@@ -29,7 +31,7 @@ Simplified Cross-Browser Dictionary cum Vocabulary Builder
    No, we are fine, atleast for now. Actually difficulty of a word is a context-based concept. Let's consider an example to understand this better, consider two people, Elon & Steve, and
     - Elon feels that words like 'Tesla', 'HyperLoop' & 'Self-Driving Cars' are easy for him as he loves them and deals with them all the time.
     - On the other hands for Steve word 'Tesla' seems difficult to him, while term like "Apple" is easy for him.
-    Hence, it's all about perpective and our domains of studies, surroundings and profession. For simplicity we have classified difficulty levels into three dom
+    Hence, it's all about perpective and our domains of studies, surroundings and profession. For simplicity we have classified difficulty levels into three domains.
   
    **Okay! I understand that so called "word-difficulty" concept, then what does WordBook is all about?**
    
@@ -53,7 +55,7 @@ Not yet, WordBook provides few other features to make the learning more easier &
 
 It contains a browser-extension, currently support chrome & firefox(partly) and a interactive web-interface for users. 
  - Browser Extension allows users to look-up word/phrase definitions and save them marking their difficulty.
- - Web Interface allows users to go through 'recent words', recite using 'flash cards', play 'word games' etc.
+ - Web Interface allows users to go through 'recent words', memorize using 'flash cards', play 'word games' etc.
 Browser Extensions is used to put the words into users' pocket/ database. Then, user can use web-interface for recitation, get word recommendations and play 'word games'.
 
 ## Screenshots
