@@ -86,8 +86,6 @@ md-chips.md-default-theme md-chip, md-chips md-chip{
   line-height:120%;
 }
 .flashcardgame md-card-title,.vocabgame{
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,9 +110,9 @@ md-chips.md-default-theme md-chip, md-chips md-chip{
   margin:20px 60px;
 }
 	/* flip the pane when hovered */
-	/* .flip-container:hover .flipper, .flip-container.hover .flipper {
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
-	} */
+	}
   .flip-container, .front, .back {
   	width: 400px;
   	height: 400px;
