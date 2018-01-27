@@ -27,5 +27,8 @@ router.route('/words')
 router.route('/recent')
     .get(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.getRecent);
 
+router.route('/recommend')
+    .get(expressJwt({ secret: config.JWT_SECRET }),authenticator.userAuthenticatator,userCtrl.getSimilarWords);
+
 
 export default router;

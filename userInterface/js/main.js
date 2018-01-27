@@ -69,6 +69,18 @@ myApp.config(['$locationProvider', '$stateProvider', '$httpProvider', function($
       }
     })
 
+    .state('dashboard.recommend', {
+      url: '/vocabgames',
+      views: {
+        'main@dashboard': {
+          templateUrl: 'views/dash/dashboard.sub.layout.html'
+        },
+        'subview@dashboard.recommend': {
+          templateUrl: 'views/dash/wordRecommend.html',
+          controller: 'wordRecommendController',
+        }
+      }
+    })
     .state('dashboard.vocabgames', {
       url: '/vocabgames',
       views: {

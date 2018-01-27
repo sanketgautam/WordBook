@@ -28,6 +28,11 @@ function menu($location, $rootScope, $http, $window) {
     type: "link"
   },
   {
+    name: "Recommended Words",
+    url: "dashboard.recommend",
+    type: "link"
+  },
+  {
     name: "Logout",
     url: "dashboard.logout",
     type: "link"
