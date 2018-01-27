@@ -1,0 +1,24 @@
+#wordbook-tooltip{
+    padding: 10px !important;
+    background: lightgoldenrodyellow !important;
+    border: 1px solid gold !important;
+    font-family:Verdana,sans-serif !important;
+    font-size:15px !important;
+    line-height:1.5 !important;
+}
+
+#wordbook-tooltip button{
+    margin-right: 5px !important;
+    /*background-color: #07c;
+    border-color: #005999;
+    box-shadow: inset 0 1px 0 #3af;*/
+}
+
+#wordbook-tooltip ol{
+    padding: 8px 25px;
+}
+
+#wordbook-tooltip #more-info{
+    margin-right: 5px !important;
+    float: right !important;
+}
