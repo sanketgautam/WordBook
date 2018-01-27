@@ -1,6 +1,8 @@
 # WordBook
 Simplified Cross-Browser Dictionary cum Vocabulary Builder
 
+![Logo](https://raw.githubusercontent.com/sanketgautam/WordBook/master/wordbook_icon.png)
+
 **WordBook** is a simple and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
 
 ## Ideal Goals
