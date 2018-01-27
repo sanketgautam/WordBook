@@ -1,5 +1,12 @@
 /* CUSTOM CSS */
 
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.docs-menu>li{
+  border-bottom:1px solid #fff;
+}
 .nav-header i{
   vertical-align: middle;
 }
@@ -47,7 +54,7 @@ md-card md-card-title md-card-title-text:only-child .md-subhead{
   font-size: 20px;
 }
 md-card.md-default-theme, md-card{
-  max-width: 24%;
+  max-width: 23%;
 }
 .md-chips md-chip{
   border-radius: 0;
@@ -60,6 +67,118 @@ md-chips.md-default-theme md-chip, md-chips md-chip{
   background: #f6f6f6d1;
   color: #18bc9c;
 
+}
+.vocabgames md-card{
+  max-width: 45%;
+}
+
+.flashcardgame md-card{
+  max-width: 100%;
+    margin: auto;
+    height: 100%;
+    cursor: pointer;
+
+
+}
+.flashcardgame .md-display-1{
+  font-size:80px;
+  color:#18BC9C;
+  line-height:120%;
+}
+.flashcardgame md-card-title,.vocabgame{
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcardgame .meaning{
+
+}
+.flashcardgame .partofspeech i{
+  vertical-align: top;
+}
+.flashcardgame h1{
+  -webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+/* CARD FLIP STYLE */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+  margin:20px 60px;
+}
+	/* flip the pane when hovered */
+	/* .flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	} */
+  .flip-container, .front, .back {
+  	width: 400px;
+  	height: 400px;
+  }
+
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.back .meaning{
+  font-size:20px;
+  text-align: center;
+}
+/* END OF CARD FLIP */
+
+.pronounce {
+  text-align: center;
+  font-size: 30px;;
+}
+.pronounce i{
+  vertical-align: text-bottom;
+  font-size:35px;
+  vertical-align: sub;
+  color: #ccc;
+}
+.pronounce .speech{
+  font-size: 35px;
+  color: #ccc;
+}
+.vocabgame{
+  margin:60px auto;
+}
+.vocabgame .left-arrow i, .vocabgame .right-arrow i {
+    font-size:100px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.vocabgame .left-arrow i:hover, .vocabgame .right-arrow i:hover {
+  color: #3d3d3d;
+  transition: all linear 0.2s;
 }
 
 @media(min-width:960px){
