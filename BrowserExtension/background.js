@@ -2,7 +2,7 @@
  chrome.storage.sync.get(["token"], function(items) {
     if(items.token == undefined){
         // Save it using the Chrome extension storage API.
-        chrome.storage.sync.set({"token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbml0MUBoYWNrMzYuY29tIiwiX2lkIjoiNWE2YzhiYmJmNmI3ZGUwYWNhZTBkMjhhIiwiaWF0IjoxNTE3MDYzMDk5fQ.bBG8fMTEO8zIAkz5xZrYsNOK7B9nUfW7vYpyxMckmW8"}, function() {
+        chrome.storage.sync.set({"token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbml0QGhhY2szNi5jb20iLCJfaWQiOiI1YTZjYjM5MjYwMWViNDIyOTkyZGI4YWIiLCJpYXQiOjE1MTcwNzMzMjJ9.Uzmy2WROingKk46gexdNNdY4FEx5oPoVYwEMPNExKjE"}, function() {
             console.log('Settings saved');
         });
     }else{
