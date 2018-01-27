@@ -1,0 +1,37 @@
+<div class="md-toolbar-tools">
+  <!-- <md-button aria-label="Go Back">
+    Go Back
+  </md-button> -->
+
+  <md-truncate>Teachers</md-truncate>
+
+  <span flex></span>
+
+  <md-button class="md-primary md-raised demo-dialog-open-button" ui-sref="dashboard.teachers.addNew">
+    Add new teacher
+  </md-button>
+</div>
+
+<md-content layout-padding>
+  <md-list flex>
+    <md-list-item class="md-3-line" ng-repeat="teacher in teachers" ng-click="gototeacher(teacher._id)">
+      <div class="md-list-item-text" layout="column">
+        <h3>{{teacher.firstName + " "+ teacher.middleName+" "+ teacher.lastName}}</h3>
+        <h4>{{teacher.designation}}</h4>
+        <p>{{teacher.loginID + "@" + schoolData.uniqueName}}</p>
+      </div>
+      <!-- <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button> -->
+    </md-list-item>
+  </md-list>
+  <md-divider></md-divider>
+</md-content>
+
+
+
+
+
+<section layout="row" layout-padding="">
+
+  <cl-paging flex cl-pages="paging.total" , cl-steps="6" , cl-page-changed="paging.onPageChanged()" , cl-align="center center" , cl-current-page="paging.current"></cl-paging>
+
+</section>

@@ -1,0 +1,119 @@
+.landing-page {
+  text-align: center;
+}
+
+.landing-page .number {
+  position: relative;
+  top: 35px;
+  display: inline-block;
+  letter-spacing: -10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 128px;
+  font-size: 128px;
+  font-weight: 300;
+  color: #7bbbd6;
+  text-align: right;
+}
+
+.landing-page .details {
+  margin-left: 40px;
+  display: inline-block;
+  padding-top: 0px;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .landing-page .number, .landing-page .details {
+    text-align: center;
+    margin-left: 0px;
+  }
+  .landing-page-full-page .landing-page {
+    margin-top: 30px;
+  }
+}
+
+.btn {
+  border-width: 0;
+  padding: 7px 14px;
+  font-size: 14px;
+  outline: none !important;
+  background-image: none !important;
+  filter: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active {
+  outline: none !important;
+  background-image: none !important;
+  filter: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn+.btn {
+  margin-left: 5px;
+}
+
+.btn-default {
+  border-width: 1px;
+  padding: 6px 13px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  vertical-align: middle;
+}
+
+.blue.btn {
+  color: #FFFFFF;
+  background-color: #3598dc;
+}
+
+.red.btn {
+  color: #FFFFFF;
+  background-color: #cb5a5e;
+}
+
+.red.btn:hover, .red.btn:focus, .red.btn:active, .red.btn.active {
+  color: #FFFFFF;
+  background-color: #c23f44;
+}
+
+.blue.btn:hover, .blue.btn:focus, .blue.btn:active, .blue.btn.active {
+  color: #FFFFFF;
+  background-color: #2386ca;
+}

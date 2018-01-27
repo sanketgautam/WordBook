@@ -1,0 +1,113 @@
+
+<div class="md-toolbar-tools">
+  <md-button aria-label="Go Back" ui-sref="dashboard.teachers">
+    Go Back
+  </md-button>
+
+  <md-truncate>Add new teacher</md-truncate>
+
+  <span flex></span>
+
+</div>
+
+
+    <md-content layout-padding>
+      <form name="teacherForm">
+
+        <div ng-messages="errorMsg" style="color:red;padding:10px;">
+        <div>{{errorMsg}}</div>
+        </div>
+        <div layout="row">
+
+
+          <md-input-container flex="33">
+            <label>First Name</label>
+            <input md-maxlength="30" required md-no-asterisk name="firstName" ng-pattern="/^[a-zA-Z]*$/" ng-model="firstName">
+            <div ng-messages="teacherForm.firstName.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="md-maxlength">First name must be less than 30 characters long.</div>
+              <div ng-message="pattern">First Name is not valid (whitespaces are not allowed)</div>
+              <div ng-message="server">{{teacherForm.firstName.$error.server}}</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container flex="33">
+            <label>Middle Name</label>
+            <input md-maxlength="30" md-no-asterisk name="middleName" ng-pattern="/^[a-zA-Z]*$/" ng-model="middleName">
+            <div ng-messages="teacherForm.middleName.$error">
+              <div ng-message="md-maxlength">Middle name must be less than 30 characters long.</div>
+              <div ng-message="pattern">Middle Name is not valid (whitespaces are not allowed)</div>
+
+              <div ng-message="server">{{teacherForm.middleName.$error.server}}</div>
+
+            </div>
+          </md-input-container>
+
+          <md-input-container flex="33">
+            <label>Last Name</label>
+            <input md-maxlength="30" required md-no-asterisk name="lastName" ng-pattern="/^[a-zA-Z]*$/" ng-model="lastName">
+            <div ng-messages="teacherForm.lastName.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="md-maxlength">Last name must be less than 30 characters long.</div>
+              <div ng-message="pattern">Last Name is not valid (whitespaces are not allowed)</div>
+              <div ng-message="server">{{teacherForm.lastName.$error.server}}</div>
+
+
+            </div>
+          </md-input-container>
+        </div>
+        <div layout="row">
+
+          <md-input-container flex="50">
+            <label>Login-ID</label>
+            <input md-maxlength="30" required md-no-asterisk name="loginID" ng-pattern="/^[a-zA-Z0-9]*$/" ng-model="loginID">
+            <div ng-messages="teacherForm.loginID.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="md-maxlength">Login ID must be less than 30 characters long.</div>
+              <div ng-message="pattern">Login ID is not valid</div>
+              <div ng-message="server">{{teacherForm.loginID.$error.server}}</div>
+            </div>
+          </md-input-container>
+
+
+          <md-input-container flex="33.3">
+            <span class="input-group-addon" id="basic-addon2">@{{schoolData.uniqueName}}</span>
+          </md-input-container>
+
+        </div>
+
+
+        <md-input-container class="md-block">
+          <label>Email (Personal) teacher</label>
+          <input required type="email" name="email" ng-model="email" minlength="10" maxlength="200" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="teacherForm.emaili.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Your email must be between 10 and 200 characters long and look like an e-mail address.
+            </div>
+            <div ng-message="server">{{teacherForm.email.$error.server}}</div>
+
+          </div>
+        </md-input-container>
+
+
+        <div layout="row">
+          <md-input-container flex="50">
+            <label>Designation</label>
+            <input required name="designation" ng-model="designation" ng-pattern="/^[a-zA-Z ]*$/">
+            <div ng-messages="teacherForm.designation.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="pattern">Designation not valid.</div>
+              <div ng-message="server">{{teacherForm.designation.$error.server}}</div>
+            </div>
+          </md-input-container>
+        </div>
+
+
+        <div>
+          <md-button class="md-raised md-primary" ng-click="createTeacher()" ng-disabled="((!teacherForm.$dirty || teacherForm.$invalid) && !teacherForm.$submitted)" type="submit">Submit</md-button>
+        </div>
+
+
+
+      </form>
+    </md-content>

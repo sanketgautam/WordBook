@@ -1,0 +1,27 @@
+<md-content class="mdtTableContainer md-whiteframe-z1" ng-cloak>
+    <!-- table card -->
+    <mdt-card-header ng-hide="alternateHeaders && dataStorage.isAnyRowSelected()"></mdt-card-header>
+
+    <!-- alternate headers -->
+    <mdt-alternate-headers ng-show="alternateHeaders && dataStorage.isAnyRowSelected()"></mdt-alternate-headers>
+    <!-- alternate headers end -->
+
+    <md-content class="mdtTable" layout="column">
+        <!-- parsing transcluded content in order to be executed -->
+        <div class="mdtTable-reader" style="display:none;"></div>
+
+        <md-progress-linear md-mode="indeterminate" class="loading-indicator" ng-class="{'loading-is-active': mdtPaginationHelper.isLoading}"></md-progress-linear>
+
+        <ng-include src="'/main/templates/generateTable.html'"></ng-include>
+    </md-content>
+
+    <!-- table card -->
+    <mdt-card-footer></mdt-card-footer>
+    <!-- table card end -->
+</md-content>
+
+<style ng-if="::mdtLoadingIndicator">
+    md-progress-linear.loading-indicator .md-bar{
+        background: {{mdtLoadingIndicator['color']}};
+    }
+</style>

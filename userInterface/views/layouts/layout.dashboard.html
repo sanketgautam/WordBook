@@ -1,0 +1,77 @@
+<spinner></spinner>
+
+<div layout="row" layout-fill ng-cloak>
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" hide-print md-is-locked-open="$mdMedia('gt-sm')">
+    <header class="nav-header">
+      <a ng-href="/" class="docs-logo">
+        <i class="material-icons">book</i> WordBook
+
+      </a>
+    </header>
+
+    <md-content flex role="navigation">
+      <ul class="docs-menu">
+        <li ng-repeat="section in menu.sections" class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}">
+          <h2 class="menu-heading md-subhead" ng-if="section.type === 'heading'" id="heading_{{ section.name | nospace }}">
+            {{section.name}}
+          </h2>
+          <menu-link section="section" ng-if="section.type === 'link' && !section.hidden"></menu-link>
+
+          <menu-toggle section="section" ng-if="section.type === 'toggle' && !section.hidden"></menu-toggle>
+
+          <ul ng-if="section.children" class="menu-nested-list">
+            <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}">
+              <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
+
+              <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </md-content>
+  </md-sidenav>
+
+  <div layout="column" tabIndex="-1" role="main" flex>
+    <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
+      <div class="md-toolbar-tools docs-toolbar-tools" tabIndex="-1">
+        <md-button class="md-icon-button" ng-click="openMenu()" hide-gt-sm aria-label="Toggle Menu">
+          <md-icon>menu</md-icon>
+        </md-button>
+
+
+        <h1 class="md-display-1">Recently Added Words</h1>
+
+
+        <!-- <div layout="row" flex class="fill-height">
+
+          <h2 class="md-toolbar-item md-breadcrumb md-headline">
+           <span hide-xs show-gt-sm	>{{parentsData.me.firstName + " "+ parentsData.me.middleName + parentsData.me.lastName}}</span>
+          </h2>
+          <span flex="" class="flex"></span>
+          <div class="md-toolbar-item docs-tools" layout="row">
+            <md-select placeholder="Select child" ng-change="changeMyChild()" ng-model="defaultChild" style="min-width: 100px;">
+              <md-option ng-repeat="child in parentsData.myChildren track by $index" ng-value="$index">
+                {{child.firstName + " "+ child.middleName + child.lastName}}
+              </md-option>
+            </md-select>
+          </div>
+
+        </div> -->
+      </div>
+
+    </md-toolbar>
+
+
+    <md-content md-scroll-y layout="column" flex ui-view="main">
+
+    </md-content>
+
+  </div>
+
+</div>
+<md-toolbar layout="row" layout-align="center end">
+  <span flex></span>
+  <h2 class="md-toolbar-tools" layout-align="center center">
+    <span class="md-flex">Made with <i class="material-icons">favorite</i> by Team- COZMO</span>
+  </h2>
+</md-toolbar>

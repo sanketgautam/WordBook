@@ -1,0 +1,37 @@
+<div layout="row" ng-cloak layout-align="center center">
+  <div flex-gt-sm="35" flex-xs="100" flex-sm="50">
+    <md-content>
+      <h3 class="md-headline">Login</h3>
+      <p style="font-size:.8em; width: 100%;color:red;" class="md-accent" ng-show="errorMsg">
+        {{errorMsg}}
+      </p>
+      <form name="loginForm">
+        <md-input-container>
+          <label> Mobile Number</label>
+          <input required type="tel" name="mobile" ng-model="mobile" md-maxlength="10" ng-pattern="/[0-9]{10}/" />
+          <div ng-messages="loginForm.mobile.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Please provide a valid mobile number.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container >
+          <label>Password</label>
+          <input md-maxlength="100" type="password" md-no-asterisk novalidate name="otp" ng-model="otp">
+          <div ng-messages="loginForm.otp.$error">
+            <div ng-message="required">This is required.</div>
+            <div ng-message="md-maxlength">Password must be less than 100 characters long.</div>
+          </div>
+        </md-input-container>
+
+        <div>
+          <md-button class="md-raised md-primary" ng-click="login()" ng-disabled="(!loginForm.$dirty || loginForm.mobile.$invalid)" type="submit">Submit</md-button>
+        </div>
+
+
+      </form>
+    </md-content>
+
+  </div>
+</div>
