@@ -64,22 +64,25 @@ Browser Extensions is used to put the words into users' pocket/ database. Then, 
 
     This section contains some sample screeshots of the project
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png" width="420">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png" width="420">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png" width="420">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png" width="420">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png" width="420">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png" width="300">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png" width="420">
+</a>
+<a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png" width="420">
 </a>
 
 ## Future Improvements
