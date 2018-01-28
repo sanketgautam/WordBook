@@ -5,6 +5,12 @@ Simplified Cross-Browser Dictionary cum Vocabulary Builder
 
 **WordBook** is a simple and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
 
+### Deployment Endpoints
+The application is Hosted @ [WordBook](http://arvinddhakad.me/hack36/#!/login),
+Use the following credentials for testing,
+ - **Username:** manit@hack36.com
+ - **Password:** hack36
+
 ## Ideal Goals
 
  - It's a cross-browser platform, hosted on cloud to be accessible from anywhere
