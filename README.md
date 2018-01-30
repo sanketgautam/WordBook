@@ -1,9 +1,9 @@
 # WordBook
-Simplified Cross-Browser Dictionary cum Vocabulary Builder
+Pesonalized Cross-Browser Dictionary/ Vocab Builder 
 
 ![Logo](https://raw.githubusercontent.com/sanketgautam/WordBook/master/wordbook_icon.png)
 
-**WordBook** is a simple and personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
+**WordBook** is a cross-platform, multi-lingual & personalized vocabulary builder, having features to improve vocab learning. It also includes support for finding meaning of connected words/ phrases.
 
 ### Deployment Endpoints
 The application is Hosted @ [WordBook](http://arvinddhakad.me/hack36/#!/login),
@@ -11,18 +11,18 @@ Use the following credentials for testing,
  - **Username:** manit@hack36.com
  - **Password:** hack36
 
-## Ideal Goals
+## Vision
 
- - It's a cross-browser platform, hosted on cloud to be accessible from anywhere
+ - Browser extension supported on all major browsers & data hosted on cloud
  - It automatically identifies languages of words and categorizes them accordingly
  - Vocab personalization using word categorization into Easy, Medium & Difficult
- - We can provide recommendation to users based on their previous word categorization
- - Word of the Day, may be selected be from user's word history or some random new word, it'll help user to revise previous words and learn new words.
+ - It shows 'Word of the Day' - recommended based on user's personal word collection
  - WordGames - There will be few word games, such as flash cards and vocab quizzes
- - Users can mark some word as favorite or delete some word from 
- - Users can go through their word history and recent words
+ - Provides new word recommendation to users based on their previous word categorization
+ - Users can browse through their word history and recent words via Web Interface
+ - Users can mark saved words as favorite or delete them from their history 
 
-## Why this? Not Blockchain, AI, IoT, Cloud or some other trending tech?
+## Why this?
    Traditional Vocabulary Learning Application and Systems are too way generic. They doesn't provide customized learning experience to cater the needs of different users according. We browse internet all the day, read many articles and come around new terminologies & words. We look them up in the dictionary and most of the times we forget them. For people focusing on learning new vocabularies and/or preparing for exams like CAT, GRE etc., require continuous and extensive recitation of vocabulary. 
    Consider an example for better example, we watch lot of movies, we discover unknown words, check their meaning in dictionary. Most of those words repeat somewhere else, and we look-up the dictionary again.
    Also most of the traditional vocabulary builders provide generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
@@ -32,7 +32,7 @@ Use the following credentials for testing,
 
 ## How WordBook Works?
 
-   We believe that Vocab Learning can be made more efficient with the personalization & tailoring to the User needs. Learning new words requires lot's of constistent practice and suggesting words of difficutly similar to what user has learned can add some cherry on this cake.
+   Vocabulary Learning can be made more efficient with the personalization & tailoring to the User needs. Learning new words requires lot's of constistent practice and suggesting words of difficutly similar to what user has learned can add some cherry on this cake.
 
    **Hey, but wait a minute ... What is meant by "difficulty" of a word? Have we gone mad or sleep deprived?** 
    
@@ -48,9 +48,9 @@ Use the following credentials for testing,
    **Yay, So how exactly does word recommendation will work out?**
    
    Hmm, there are two proposed algorithms for that, which shows the trade-off between simplicity and implementation, 
-  - Multiple users marking common words to similar difficulty levels may also have similar treatment for other words in each others' dictionary. Hence, we can recommend them each others words, without them knowing about that (to preserve privacy and anonymity). It's quick and suitable for most of our use-cases.
+  - Multiple users marking common words to similar difficulty levels may also have similar treatment for other words in each others' dictionary. Hence, we can recommend them each others words, without them knowing about that (to preserve privacy and anonymity). It's quick and suitable for most of our use-cases. **(easy implementation, works fine for basic use-cases)**
 
-  - An alternative approach will require a bit of Data Analytics & ML Based Recommendation System to make more accurate predictions/ recommendations, but this approach required data-collection, model training & testing. Hence, not feasible for quick prototype. ML Recommendation can take into account various factors such as _domain of study/profession, age, citizenship etc._
+  - An alternative approach will require a bit of Data Analytics & ML Based Recommendation System to make more accurate predictions/ recommendations, but this approach required data-collection, model training & testing. Hence, not feasible for quick prototype. ML Recommendation can take into account various factors such as _domain of study/profession, age, citizenship etc._ **(efficient & provides better recommendations, but takes more time)**
 
 **Seems Okay, So, Is that it?**
 
@@ -91,7 +91,7 @@ Browser Extensions is used to put the words into users' pocket/ database. Then, 
     <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png" width="420">
 </a>
 
-## Future Improvements
+## What needs to be Improved?
  
  - Compatibility issues must be resolved to make it completely cross-browser
  - Dictionary could be extended to support muliple source & target languages
