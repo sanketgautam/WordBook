@@ -1,5 +1,5 @@
 # WordBook
-Pesonalized Cross-Browser Dictionary/ Vocab Builder 
+Pesonalized Cross-Browser Vocabulary Recommender System
 
 ![Logo](https://raw.githubusercontent.com/sanketgautam/WordBook/master/wordbook_icon.png)
 
