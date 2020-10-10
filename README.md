@@ -28,7 +28,7 @@ Use the following credentials for testing,
    Also most of the traditional vocabulary builders provide generic and pre-defined approach to learn new words and recite them. While different users have different prior-knowledge levels & learning paces, hence the learning process must be customized to cater the needs of corresponding users.  
    So, to improve the overall experience we introdcuce the "difficuly-concept" (as explained below) and personalize the vocabulary learning experience and help improve the learning curve. 
    
-                "__We believe in simplicity of solving a problem while focusing on user-experience__".
+    "__We believe in simplicity of solving a problem while focusing on user-experience__".
 
 ## How WordBook Works?
 
@@ -70,25 +70,25 @@ Browser Extensions is used to put the words into users' pocket/ database. Then, 
 
     This section contains some sample screeshots of the project
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/word_popup.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_database.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/vocabquiz.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/flashcard_meaning.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/recent_words.png">
 </a>
 <a href="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png">
-    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png" width="420">
+    <img src="https://raw.githubusercontent.com/sanketgautam/WordBook/master/screenshots/words_recommendation.png">
 </a>
 
 ## What needs to be Improved?
